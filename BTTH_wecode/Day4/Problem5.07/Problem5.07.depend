@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1763382780 source:c:\codeblock\btth_wecode\day4\problem5.07\main.cpp
+	<iostream>
+	<iomanip>
+	<cmath>
+
