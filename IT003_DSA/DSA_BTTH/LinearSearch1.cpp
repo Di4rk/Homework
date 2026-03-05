@@ -25,6 +25,6 @@ int main(){
         }
         j++;
     }
-    if (j == n - 1) cout << -1;
+    if (j == n) cout << -1;
     return 0;
 }
