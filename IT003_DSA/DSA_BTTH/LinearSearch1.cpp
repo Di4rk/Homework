@@ -16,7 +16,15 @@ int main(){
             break;
         }
     }
+    int j = 0;
     for(int i = n-1;i>= 0; i--){
-        
+        if(a[i] == x){
+            cout << j << endl;
+            cout << j + 1 << endl;
+            break; 
+        }
+        j++;
     }
+    if(!j) cout << -1;
+    return 0;
 }
