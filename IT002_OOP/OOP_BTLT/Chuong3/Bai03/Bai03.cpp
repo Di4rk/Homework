@@ -31,5 +31,5 @@ int main() {
 	p1.Nhap();
 	cout << "Nhap diem thu hai: " << endl;
 	p2.Nhap();
-	cout << "Khoang cach giua hai diem: " << p1.KhoangCach(p2) << endl;
+	cout << "Khoang cach giua hai diem la: " << p1.KhoangCach(p2) << endl;
 }
