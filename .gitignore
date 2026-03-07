@@ -1,41 +1,32 @@
-# Prerequisites
-*.d
+# === Thư mục cấu hình ẩn của Visual Studio ===
+.vs/
+*.vsidx
+*.suo
+*.user
+*.db
+*.sqlite
+*.slnx.sqlite
+*.wsuo
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
+# === Thư mục chứa kết quả Build (Cái này làm nặng repo nhất) ===
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Bb]in/
+[Oo]bj/
+
+# === File rác sinh ra trong quá trình biên dịch (Compile) ===
 *.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Linker files
-*.ilk
-
-# Debugger Files
-*.pdb
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
 *.exe
-*.out
-*.app
-
-# debug information files
-*.dwo
+*.ilk
+*.pdb
+*.idb
+*.tlog
+*.log
+*.lastbuildstate
+*.recipe
+*.ipch
+*.iobj
+*.ipdb
+*.vsix
