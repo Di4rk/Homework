@@ -1,32 +1,87 @@
-# === Thư mục cấu hình ẩn của Visual Studio ===
+# =========================================================================
+# THE ULTIMATE .GITIGNORE FOR 4-YEAR IT DEGREE
+# =========================================================================
+
+# 1. BẢO MẬT (TUYỆT ĐỐI KHÔNG PUSH LÊN)
+# Chứa mật khẩu, API keys, chuỗi kết nối database...
+.env
+*.env
+.env.*
+secret/
+credentials.json
+
+# 2. HỆ ĐIỀU HÀNH (Rác của Windows & macOS)
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# 3. CÁC IDE & EDITOR PHỔ BIẾN
+# Visual Studio (C++/C#)
 .vs/
 *.vsidx
 *.suo
 *.user
-*.db
-*.sqlite
 *.slnx.sqlite
-*.wsuo
+*.db
 
-# === Thư mục chứa kết quả Build (Cái này làm nặng repo nhất) ===
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+*.code-workspace
+
+# JetBrains (CLion, IntelliJ, PyCharm, WebStorm...)
+.idea/
+cmake-build-*/
+*.iml
+*.iws
+
+# 4. C/C++ (Đặc trị rác biên dịch và file thực thi)
+[Bb]in/
+[Oo]bj/
 [Dd]ebug/
 [Rr]elease/
 x64/
 x86/
-[Bb]in/
-[Oo]bj/
-
-# === File rác sinh ra trong quá trình biên dịch (Compile) ===
-*.obj
 *.exe
+*.out
+*.app
+*.o
+*.obj
 *.ilk
 *.pdb
 *.idb
 *.tlog
 *.log
-*.lastbuildstate
 *.recipe
 *.ipch
-*.iobj
-*.ipdb
-*.vsix
+
+# 5. PYTHON (Mốt học AI/Data Science)
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.pytest_cache/
+
+# 6. NODEJS & WEB DEV (Mốt làm web project)
+node_modules/
+dist/
+build/
+.npm
+.next/
+.nuxt/
+
+# 7. JAVA (Mốt học OOP nâng cao/Enterprise)
+*.class
+*.jar
+*.war
+*.ear
+target/
+.gradle/
