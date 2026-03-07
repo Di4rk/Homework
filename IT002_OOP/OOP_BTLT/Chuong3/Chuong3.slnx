@@ -1,0 +1,10 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Bai01/Bai01.vcxproj" Id="47b8ac26-68eb-4fde-816f-0df4315ff3f6" />
+  <Project Path="Bai02/Bai02.vcxproj" Id="0fe3c5ca-cc19-4510-91c5-b9c970bd3392" />
+  <Project Path="Bai03/Bai03.vcxproj" Id="b27b51d9-9d57-4767-8dac-4a1374481385" />
+  <Project Path="Bai04/Bai04.vcxproj" Id="ac4badf8-c3e8-4e91-a186-647e02b5ac96" />
+</Solution>
