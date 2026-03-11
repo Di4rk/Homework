@@ -23,4 +23,4 @@ int main(){
         cin >> a[i];
     }
     mySort(a ,n);
-}123
+}
