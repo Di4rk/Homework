@@ -1,0 +1,1 @@
+{"name":"Local: Sort2D","url":"c:\\Dev\\C++\\IT003_DSA\\Wecode\\Week2\\Sort2D.cpp","tests":[{"id":1774445593063,"input":"5\n\n1 2\n\n1 3\n\n2 4\n\n2 9\n\n4 1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Dev\\C++\\IT003_DSA\\Wecode\\Week2\\Sort2D.cpp","group":"local","local":true}
