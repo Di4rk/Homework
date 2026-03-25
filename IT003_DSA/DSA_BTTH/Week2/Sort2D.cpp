@@ -28,13 +28,16 @@ void merge(vector<pair<int,int>> &diem, int left, int mid, int right){
 void mergeSort(vector<pair<int,int>> &diem, int left, int right){
     if(left >= right) return;
     int mid = left + (right - left) / 2;
-
     mergeSort(diem, left, mid);
     mergeSort(diem, mid + 1, right);
     merge(diem, left, mid, right);
 }
 
 int main(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+
     int n;
     cin >> n;
     vector<pair<int,int>> diem(n);
