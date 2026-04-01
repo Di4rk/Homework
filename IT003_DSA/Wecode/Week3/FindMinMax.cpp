@@ -28,7 +28,7 @@ TNode* CreateTNode(int x) {
 }
 
 void Insert(Tree &, int);
-int DemNutChan(TNode *);
+void InMinMax(Tree);
 
 
 void Insert(Tree &T, int x){
@@ -38,29 +38,39 @@ void Insert(Tree &T, int x){
     else{
         TNode *p = T.root;
         while(1){
-            if(p->key > x){
-                if(p->pLeft == nullptr){
-                    p->pLeft = CreateTNode(x);
-                    break;
-                }
-                else p = p->pLeft;
-            }
-            else{
+            if(p->key < x){
                 if(p->pRight == nullptr){
                     p->pRight = CreateTNode(x);
                     break;
                 }
                 else p = p->pRight;
             }
+            else{
+                if(p->pLeft == nullptr){
+                    p->pLeft = CreateTNode(x);
+                    break;
+                }
+                else p = p->pLeft;
+            }
         }
     }
 }
 
-int DemNutChan(TNode *p){
-    if (p == nullptr) return 0;
-    if(p->key % 2 == 0) return 1 + DemNutChan(p->pLeft) + DemNutChan(p->pRight);
-    else return DemNutChan(p->pLeft) + DemNutChan(p->pRight);
+void InMinMax(Tree T){
+    TNode *p = T.root;
+    TNode *left = p, *right = p;
+    while (left->pLeft != nullptr){
+        left = left->pLeft;
+    }
+    while (right->pRight != nullptr){
+        right = right->pRight;
+    }
+    cout << "Min: " << left->key << endl;
+    cout << "Max: " << right->key;
+
 }
+
+
 
 int main()
 {
@@ -74,7 +84,7 @@ int main()
         n--;
     }
     
-    cout << "#EvenNodes: " << DemNutChan(T.root);
+    InMinMax(T);
     
     return 0;
 }

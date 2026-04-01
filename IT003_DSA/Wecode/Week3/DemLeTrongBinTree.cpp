@@ -28,7 +28,7 @@ TNode* CreateTNode(int x) {
 }
 
 void Insert(Tree &, int);
-int DemNutChan(TNode *);
+int DemNutLe(TNode *);
 
 
 void Insert(Tree &T, int x){
@@ -56,11 +56,12 @@ void Insert(Tree &T, int x){
     }
 }
 
-int DemNutChan(TNode *p){
+int DemNutLe(TNode *p){
     if (p == nullptr) return 0;
-    if(p->key % 2 == 0) return 1 + DemNutChan(p->pLeft) + DemNutChan(p->pRight);
-    else return DemNutChan(p->pLeft) + DemNutChan(p->pRight);
+    if(p->key % 2 != 0) return 1 + DemNutLe(p->pLeft) + DemNutLe(p->pRight);
+    else return DemNutLe(p->pLeft) + DemNutLe(p->pRight);
 }
+
 
 int main()
 {
@@ -74,7 +75,7 @@ int main()
         n--;
     }
     
-    cout << "#EvenNodes: " << DemNutChan(T.root);
+    cout << "#OddNodes: " << DemNutLe(T.root);
     
     return 0;
 }
