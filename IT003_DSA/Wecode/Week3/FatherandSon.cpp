@@ -1,5 +1,8 @@
 
 #include <iostream>
+#include <vector>
+#include <stack>
+#include <queue>
 using namespace std;
 
 struct TNode{
@@ -18,25 +21,22 @@ void CreateTree(Tree &T)
 }
 
 TNode* CreateTNode(int x) {
-    TNode* p;
-    p = new TNode;
-    if (p == NULL)
-        exit(1);
+    TNode* p = new TNode;
     p->key = x;
     p->pLeft = p->pRight = NULL;
     return p;
 }
 
-void Insert(Tree &, int);
+void Insert(TNode* &, int);
 bool isFather(Tree, int, int);
 void run(int, Tree);
 
-void Insert(Tree &T, int x){
-    if(T.root == NULL){
-        T.root = CreateTNode(x);
+void Insert(TNode* &T, int x){
+    if(T == NULL){
+        T = CreateTNode(x);
     }
     else{
-        TNode *p = T.root;
+        TNode *p = T;
         while(1){
             if(p->key > x){
                 if(p->pLeft == NULL){
@@ -87,6 +87,12 @@ void run(int x, Tree T){
     }
 }
 
+
+
+
+
+
+
 int main()
 {
     ios_base::sync_with_stdio(false);
@@ -97,7 +103,7 @@ int main()
     int data;
     while(n != 0) {
         cin >> data;
-        Insert(T, data);
+        Insert(T.root, data);
         n--;
     }
     int q; cin >> q;
