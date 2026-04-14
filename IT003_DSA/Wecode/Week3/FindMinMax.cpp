@@ -67,7 +67,6 @@ void InMinMax(Tree T){
     }
     cout << "Min: " << left->key << endl;
     cout << "Max: " << right->key;
-
 }
 
 
