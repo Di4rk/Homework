@@ -1,0 +1,1 @@
+{"name":"Local: SearchStep","url":"c:\\Dev\\C++\\IT003_DSA\\Wecode\\Week3\\SearchStep.cpp","tests":[{"id":1776189274246,"input":"12\n44 18 88 13 37 59 108 15 23 40 55 71\n1\n13","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Dev\\C++\\IT003_DSA\\Wecode\\Week3\\SearchStep.cpp","group":"local","local":true}
