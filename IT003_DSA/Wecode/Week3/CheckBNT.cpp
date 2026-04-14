@@ -1,6 +1,5 @@
 #include <iostream>
 #include <vector>
-#include <iomanip>
 
 using namespace std;
 
@@ -26,11 +25,11 @@ TREE CreateTree(vector<int> pre, vector<int> in, int preB, int preE, int inB, in
 }
 
 
-double AverageByLevel(TREE, int);
+bool isBST(TREE);
 
 int main() {
     vector<int> nlr, lnr;
-    int n, key, m, lvl;
+    int n, key;
 
     cin >> n;
 
@@ -43,37 +42,25 @@ int main() {
         cin >> key;
         lnr.push_back(key);
     }
-
     TREE r = CreateTree(nlr, lnr, 0, nlr.size()-1, 0, lnr.size()-1);
-
-    cin >> m;
-
-    cout << setprecision(2) << fixed;
-
-    for (int i = 0; i < m; i++) {
-        cin >> lvl;
-        cout << AverageByLevel(r, lvl) << endl;
-    }
-
+    if (isBST(r))
+        cout << "YES";
+    else
+        cout << "NO";
     return 0;
 }
+	
+bool isBSTUtil(TREE node, TNode* minNode, TNode* maxNode){
+    if(node == nullptr)
+        return true;
+    if(minNode != nullptr && node -> key <= minNode -> key)
+        return false;
+    if(maxNode != nullptr && node -> key >= maxNode -> key)
+        return false;
 
-void GetLevel(TREE t, int currentlevel, int tagetlevel, int &sum, int &count){
-    if(t == nullptr) return;
-    if(currentlevel == tagetlevel){
-        sum += t->key;
-        count++;
-        return;
-    }
-    GetLevel(t->left, currentlevel + 1, tagetlevel, sum, count);
-    GetLevel(t->right, currentlevel + 1, tagetlevel, sum, count);
+    return isBSTUtil(node->left, minNode, node) && isBSTUtil(node->right, node, maxNode);
 }
 
-double AverageByLevel(TREE t, int level) {
-    if(t == nullptr) return 0;
-    int sum = 0;
-    int count = 0;
-    GetLevel(t, 0, level, sum, count);
-    if(count == 0) return 0;
-    return (double)sum / count;
+bool isBST(TREE root){
+    return isBSTUtil(root, nullptr, nullptr);
 }
