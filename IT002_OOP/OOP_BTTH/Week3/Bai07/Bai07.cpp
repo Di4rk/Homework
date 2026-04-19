@@ -1,20 +1,33 @@
-// Bai07.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
+#include "cNhanVienVP.h"
 #include <iostream>
+#include <iomanip>
 
-int main()
-{
-    std::cout << "Hello World!\n";
+using namespace std;
+
+int main() {
+    cout << "=== HE THONG QUAN LY NHAN VIEN VAN PHONG ===\n";
+
+    cDSNhanVienVP congTy;
+    congTy.nhap();
+
+    cout << "\n[>] Danh sach nhan vien:\n";
+    congTy.xuatDanhSach();
+
+    cout << "\n[>] Nhan vien co luong cao nhat:\n";
+    cNhanVienVP nvMax = congTy.timNhanVienLuongCaoNhat();
+    nvMax.xuat();
+
+    cout << "\n[+] Tong luong cong ty phai tra: "
+        << fixed << setprecision(0) << congTy.tinhTongLuong() << "\n";
+
+    cout << "\n[>] Nhan vien co tuoi cao nhat (Lao lang nhat):\n";
+    cNhanVienVP nvOldest = congTy.timNhanVienTuoiCaoNhat();
+    nvOldest.xuat();
+
+    cout << "\n[>] Danh sach nhan vien sap xep luong tang dan:\n";
+    congTy.sapXepLuongTangDan();
+    congTy.xuatDanhSach();
+
+    cout << "\n=== FINISH ===\n";
+    return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file

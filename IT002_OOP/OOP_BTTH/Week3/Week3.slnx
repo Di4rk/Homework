@@ -9,4 +9,6 @@
   <Project Path="Bai04/Bai04.vcxproj" Id="814c768f-d3dd-47a8-8dd4-672eeeb739f4" />
   <Project Path="Bai05/Bai05.vcxproj" Id="1c5d20c9-395a-4b97-9fd7-d98c99c75bb5" />
   <Project Path="Bai06/Bai06.vcxproj" Id="2fbeefbe-7446-4d82-9217-ee1a4d58bf5a" />
+  <Project Path="Bai07/Bai07.vcxproj" Id="7f46158c-0c27-47fe-8fa1-048507715734" />
+  <Project Path="Bai08/Bai08.vcxproj" Id="c8e2fc09-077a-4a97-9353-1b00e3de61c0" />
 </Solution>
