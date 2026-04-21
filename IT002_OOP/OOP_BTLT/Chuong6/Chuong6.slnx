@@ -3,6 +3,7 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="../../../../../../../../Dev/C++/IT002_OOP/OOP_BTLT/Chuong6/Bai02/Bai02.vcxproj" Id="a070b66d-5c22-4a7a-abd4-16388b354252" />
-  <Project Path="../../../../../../../../Dev/C++/IT002_OOP/OOP_BTLT/Chuong6/Bai1/Bai1.vcxproj" Id="3bbf8db1-1ae9-42e9-aa0c-af8164479146" />
+  <Project Path="Bai02/Bai02.vcxproj" Id="a070b66d-5c22-4a7a-abd4-16388b354252" />
+  <Project Path="Bai03/Bai03.vcxproj" Id="c14e0be6-4c66-4720-b66e-6d4e24241363" />
+  <Project Path="Bai1/Bai1.vcxproj" Id="3bbf8db1-1ae9-42e9-aa0c-af8164479146" />
 </Solution>
