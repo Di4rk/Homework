@@ -16,7 +16,7 @@ int main() {
 
 	cout << "Ngay 1 + " << n << " ngay: " << d1 + n << endl;
 	cout << "Ngay 1 - " << n << " ngay: " << d1 - n << endl;
-	cout << "Ngay 2 - Ngay 1: " << d2 - d1 << " ngay" << endl;
+	cout << "Khoang cach giua ngay 1 va ngay 2: " << d2 - d1 << " ngay" << endl;
 
 	return 0;
 }

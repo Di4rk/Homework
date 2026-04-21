@@ -7,4 +7,6 @@
   <Project Path="Bai02/Bai02.vcxproj" Id="6c030e3d-9c95-4664-9ec7-b1089976305a" />
   <Project Path="Bai03/Bai03.vcxproj" Id="f60ac959-2b99-431d-ab28-41c64fc62fc9" />
   <Project Path="Bai04/Bai04.vcxproj" Id="09a21cf7-d37c-4d81-8c55-aa6f0c0724ab" />
+  <Project Path="Bai05/Bai05.vcxproj" Id="959f36cf-4b3b-4fac-81f8-6cc75383fa6b" />
+  <Project Path="Bai06/Bai06.vcxproj" Id="eee28424-c78c-41ba-b471-3a6f90ea8e1a" />
 </Solution>
