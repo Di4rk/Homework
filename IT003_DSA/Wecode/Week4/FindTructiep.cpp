@@ -24,7 +24,7 @@ struct LIST {
 
 NODE* CreateNode(STUDENT);
 void CreateList(LIST &);
-void AddTail(LIST&, STUDENT);
+void AddTail(LIST &, STUDENT);
 void DeleteList(LIST &);
 
 struct HashTable {
@@ -35,9 +35,10 @@ struct HashTable {
 
 void CreateHashTable(HashTable &, int);
 int HashFunction(HashTable, int); // Hash Function
-void Insert(HashTable &, STUDENT);
 void PrintHashTable(HashTable);
 void DeleteHashTable(HashTable &);
+void Insert(HashTable &, STUDENT);
+NODE* Search(HashTable , int);
 
 void Input(STUDENT &x) {
     cin >> x.MSSV;
@@ -46,11 +47,16 @@ void Input(STUDENT &x) {
     cin >> x.GioiTinh;
     cin >> x.TBK;
 }
+
+void Output(STUDENT sv){
+    cout << "[" << sv.MSSV << ", " << sv.HoTen << ", " << sv.GioiTinh << ", " << sv.NamSinh << ", " << sv.TBK << "] ";
+}
+
 int main()
 {
     HashTable HT;
 
-    int M, n;
+    int M, n, k, mssv;
     STUDENT sv;
 
     cin >> M;
@@ -58,9 +64,21 @@ int main()
     cin >> n;
     for (int i = 0; i < n; i++) {
         Input(sv);
-        Insert(HT, sv);
+        Insert(HT, sv); // Code cái này
     }
-    PrintHashTable(HT);
+    cin >> k;
+    for (int i = 0; i < k; i++) {
+        cin >> mssv;
+        NODE *p = Search(HT, mssv);   // Code cái này
+
+        if (p == NULL)
+            cout << "KHONG TIM THAY\n";
+        else {
+            sv = p->data;
+            Output(sv);
+            cout << "\n";
+        }
+    }
     DeleteHashTable(HT);
     return 0;
 }
@@ -71,8 +89,8 @@ void CreateEmptyList(LIST &L) {
 
 NODE* CreateNode(STUDENT x) {
     NODE *p = new NODE;
-    p->data = x;
     p->pNext = NULL;
+    p->data = x;
     return p;
 }
 
@@ -114,7 +132,7 @@ void PrintHashTable(HashTable HT) {
         if (p == NULL) continue;
         while (p != NULL) {
             STUDENT sv = p->data;
-            cout << "[" << sv.MSSV << ",  " << sv.HoTen << "  , " << sv.GioiTinh << ", " << sv.NamSinh << ", " << sv.TBK << "] ";
+            Output(sv);
             p = p->pNext;
         }
         cout << "\n";
@@ -130,12 +148,23 @@ void DeleteHashTable(HashTable &HT) {
     HT.M = 0;
 }
 
-void Insert(HashTable &HT, STUDENT x) {
-    if((double)(HT.n + 1) / HT.M >= LOAD) {
+void Insert(HashTable &HT, STUDENT x){
+    if((double)(HT.n + 1) / HT.M >= LOAD){
         return;
     }
-
     int index = HashFunction(HT, x.MSSV);
     AddTail(HT.Table[index], x);
     HT.n++;
+}
+
+NODE* Search(HashTable HT, int x){
+    int index = HashFunction(HT, x);
+    NODE *p = HT.Table[index].pHead;
+    while(p != nullptr){
+        if(p->data.MSSV == x){
+            return p;
+        }
+        p = p->pNext;
+    }
+    return nullptr;
 }
