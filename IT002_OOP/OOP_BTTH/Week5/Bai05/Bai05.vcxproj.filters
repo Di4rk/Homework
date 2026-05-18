@@ -18,5 +18,25 @@
     <ClCompile Include="Bai05.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="NhanVien.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NVSanXuat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NVVanPhong.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="NhanVien.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NVSanXuat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NVVanPhong.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

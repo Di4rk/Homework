@@ -1,20 +1,47 @@
-// Bai05.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+#include "NVSanXuat.h"
+#include "NVVanPhong.h"
 
-#include <iostream>
+int main() {
+    int nSX, nVP;
 
-int main()
-{
-    std::cout << "Hello World!\n";
+    cout << "Nhap so luong nhan vien san xuat: ";
+    cin >> nSX;
+    NVSanXuat* dsSX = new NVSanXuat[nSX];
+    for (int i = 0; i < nSX; i++) {
+        cout << ">> Nhap thong tin NV San Xuat thu " << i + 1 << ":" << endl;
+        dsSX[i].Nhap();
+        dsSX[i].TinhLuong();
+    }
+
+    cout << "\nNhap so luong nhan vien van phong: ";
+    cin >> nVP;
+    NVVanPhong* dsVP = new NVVanPhong[nVP];
+    for (int i = 0; i < nVP; i++) {
+        cout << ">> Nhap thong tin NV Van Phong thu " << i + 1 << ":" << endl;
+        dsVP[i].Nhap();
+        dsVP[i].TinhLuong();
+    }
+
+    cout << "\n=============================================" << endl;
+    double tongLuongCongTy = 0;
+
+    cout << "--- DANH SACH NHAN VIEN SAN XUAT ---" << endl;
+    for (int i = 0; i < nSX; i++) {
+        dsSX[i].Xuat();
+        tongLuongCongTy += dsSX[i].getLuong();
+    }
+
+    cout << "\n--- DANH SACH NHAN VIEN VAN PHONG ---" << endl;
+    for (int i = 0; i < nVP; i++) {
+        dsVP[i].Xuat();
+        tongLuongCongTy += dsVP[i].getLuong();
+    }
+
+    cout << "\n=============================================" << endl;
+    cout << "TONG LUONG CONG TY PHAI TRA: " << (long long)tongLuongCongTy << " VND" << endl;
+
+    delete[] dsSX;
+    delete[] dsVP;
+
+    return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
