@@ -1,20 +1,61 @@
-// Bai02.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+#include "SachGiaoKhoa.h"
+#include "SachThamKhao.h"
 
-#include <iostream>
+int main() {
+    SachGiaoKhoa dsSGK[3];
+    SachThamKhao dsSTK[3];
+    double tongTienSGK = 0;
+    double tongTienSTK = 0;
+    double tongDonGiaSTK = 0;
 
-int main()
-{
-    std::cout << "Hello World!\n";
+    cout << "--- NHAP THONG TIN SACH GIAO KHOA ---" << endl;
+    for (int i = 0; i < 3; i++) {
+        cout << ">> Cuon thu " << i + 1 << ":" << endl;
+        dsSGK[i].Nhap();
+        tongTienSGK += dsSGK[i].TinhThanhTien();
+    }
+
+    cout << "\n--- NHAP THONG TIN SACH THAM KHAO ---" << endl;
+    for (int i = 0; i < 3; i++) {
+        cout << ">> Cuon thu " << i + 1 << ":" << endl;
+        dsSTK[i].Nhap();
+        tongTienSTK += dsSTK[i].TinhThanhTien();
+        tongDonGiaSTK += dsSTK[i].getDonGia();
+    }
+
+    cout << "\n=============================================" << endl;
+    cout << "--- DANH SACH SACH GIAO KHOA ---" << endl;
+    for (int i = 0; i < 3; i++) {
+        dsSGK[i].Xuat();
+    }
+
+    cout << "\n--- DANH SACH SACH THAM KHAO ---" << endl;
+    for (int i = 0; i < 3; i++) {
+        dsSTK[i].Xuat();
+    }
+
+    cout << "\n=============================================" << endl;
+    cout << "Tong thanh tien Sach Giao Khoa: " << tongTienSGK << endl;
+    cout << "Tong thanh tien Sach Tham Khao: " << tongTienSTK << endl;
+    cout << "Trung binh cong don gia Sach Tham Khao: " << tongDonGiaSTK / 3.0 << endl;
+
+    cout << "\n=============================================" << endl;
+    string nxbK;
+    cout << "Nhap ten NXB can tim (K): ";
+    cin.ignore();
+    getline(cin, nxbK);
+
+    cout << "\n--- CAC SACH GIAO KHOA CUA NXB " << nxbK << " ---" << endl;
+    bool found = false;
+    for (int i = 0; i < 3; i++) {
+        if (dsSGK[i].getNxb() == nxbK) {
+            dsSGK[i].Xuat();
+            found = true;
+        }
+    }
+    if (!found) {
+        cout << "Khong tim thay sach cua nha xuat ban nay!" << endl;
+    }
+
+    return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file

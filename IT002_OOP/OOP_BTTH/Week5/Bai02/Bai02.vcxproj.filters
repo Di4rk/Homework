@@ -18,5 +18,25 @@
     <ClCompile Include="Bai02.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Sach.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SachGiaoKhoa.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SachThamKhao.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Sach.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SachGiaoKhoa.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SachThamKhao.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

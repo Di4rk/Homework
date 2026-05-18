@@ -136,7 +136,6 @@
     <ClInclude Include="ChuyenXe.h" />
     <ClInclude Include="NgoaiThanh.h" />
     <ClInclude Include="NoiThanh.h" />
-    <ClInclude Include="DanhSachChuyenXe.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
