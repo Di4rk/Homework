@@ -15,39 +15,33 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Bai02.cpp">
+    <ClCompile Include="Bai03.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GiaoDich.cpp">
+    <ClCompile Include="SinhVien.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GiaoDichDat.cpp">
+    <ClCompile Include="SVDaiHoc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GiaoDichNhaPho.cpp">
+    <ClCompile Include="SVCaoDang.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GiaoDichChungCu.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DanhSachGiaoDich.cpp">
+    <ClCompile Include="DanhSachSV.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GiaoDich.h">
+    <ClInclude Include="SinhVien.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GiaoDichDat.h">
+    <ClInclude Include="SVDaiHoc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GiaoDichNhaPho.h">
+    <ClInclude Include="SVCaoDang.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GiaoDichChungCu.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DanhSachGiaoDich.h">
+    <ClInclude Include="DanhSachSV.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

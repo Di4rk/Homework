@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{abe5c7c9-585f-493a-bae4-b4c7f4282f04}</ProjectGuid>
-    <RootNamespace>Bai02</RootNamespace>
+    <ProjectGuid>{cd8b5b56-4c79-4a8c-9447-8066f80d4f12}</ProjectGuid>
+    <RootNamespace>Bai03</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,19 +139,17 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Bai02.cpp" />
-    <ClCompile Include="DanhSachGiaoDich.cpp" />
-    <ClCompile Include="GiaoDich.cpp" />
-    <ClCompile Include="GiaoDichChungCu.cpp" />
-    <ClCompile Include="GiaoDichDat.cpp" />
-    <ClCompile Include="GiaoDichNhaPho.cpp" />
+    <ClCompile Include="Bai03.cpp" />
+    <ClCompile Include="DanhSachSV.cpp" />
+    <ClCompile Include="SinhVien.cpp" />
+    <ClCompile Include="SVCaoDang.cpp" />
+    <ClCompile Include="SVDaiHoc.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="DanhSachGiaoDich.h" />
-    <ClInclude Include="GiaoDich.h" />
-    <ClInclude Include="GiaoDichChungCu.h" />
-    <ClInclude Include="GiaoDichDat.h" />
-    <ClInclude Include="GiaoDichNhaPho.h" />
+    <ClInclude Include="DanhSachSV.h" />
+    <ClInclude Include="SinhVien.h" />
+    <ClInclude Include="SVCaoDang.h" />
+    <ClInclude Include="SVDaiHoc.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
