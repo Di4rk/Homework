@@ -1,8 +1,9 @@
 #include "NhanVien.h"
+using namespace std;
 
 NhanVien::~NhanVien() {}
 
-NhanVien::Nhap() {
+void NhanVien::Nhap() {
 	cin.ignore();
 	cout << "Nhap ho ten: ";
 	getline(cin, HoTen);
@@ -10,6 +11,10 @@ NhanVien::Nhap() {
 	cin >> NgaySinh.day >> NgaySinh.month >> NgaySinh.year;
 }
 
-NhanVien::Xuat() {
+void NhanVien::Xuat() {
 	cout << "Ho Ten: " << HoTen << "| Ngay Sinh: " << NgaySinh.day << "/" << NgaySinh.month << "/" << NgaySinh.year << endl;
+}
+
+int NhanVien::GetTuoi() {
+	return NgaySinh.day + NgaySinh.month * 30 + NgaySinh.year * 365;
 }

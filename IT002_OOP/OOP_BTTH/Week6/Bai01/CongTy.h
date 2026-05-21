@@ -2,14 +2,15 @@
 #include "NhanVien.h"
 #include <vector>
 
-class DanhSachNhacVien {
+class DanhSachNhanVien {
 private:
-	vector<NhacVien*> ds;
+	std::vector<NhanVien*> ds;
 public:
 	void Nhap();
 	void Xuat();
 	long long TongLuong();
-	void LuongThapNhat();
+	void LuongThapNhat(); 
 	void TuoiCaoNhat();
-	~DanhSachNhacVien();
+
+	~DanhSachNhanVien();
 };
