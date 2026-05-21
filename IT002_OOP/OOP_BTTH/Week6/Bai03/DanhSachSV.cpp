@@ -37,7 +37,7 @@ void DanhSachSV::Xuat() {
 void DanhSachSV::XuatSVTotNghiep() {
 	cout << "Danh sach sinh vien tot nghiep: \n";
 	for (const auto& sv : ds) {
-		if (sv->TotNhiep()) {
+		if (sv->TotNghiep()) {
 			sv->Xuat();
 		}
 	}
@@ -74,6 +74,7 @@ SinhVien* DanhSachSV::SVCaoDangCoDiemTrungBinhCaoNhat() {
 				svMax = sv;
 		}
 	}
+	return svMax;
 }
 
 void DanhSachSV::SoLuongSVKoTotNghiepTheoLoai() {

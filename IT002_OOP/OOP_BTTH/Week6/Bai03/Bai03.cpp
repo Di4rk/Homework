@@ -1,5 +1,5 @@
-#include "DanhSachSV"
-
+#include "DanhSachSV.h"
+using namespace std;
 int main() {
 	DanhSachSV ds;
 	ds.Nhap();

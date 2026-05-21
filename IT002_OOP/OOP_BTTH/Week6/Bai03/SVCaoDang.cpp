@@ -1,4 +1,5 @@
 #include "SVCaoDang.h"
+using namespace std;
 
 void SVCaoDang::Nhap() {
 	SinhVien::Nhap();
