@@ -140,6 +140,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Bai06.cpp" />
+    <ClCompile Include="CongTy.cpp" />
+    <ClCompile Include="KhachBTH.cpp" />
+    <ClCompile Include="KhachThan.cpp" />
+    <ClCompile Include="KhanhHang.cpp" />
+    <ClCompile Include="KhanhVIP.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CongTy.h" />
+    <ClInclude Include="KhachBTH.h" />
+    <ClInclude Include="KhachThan.h" />
+    <ClInclude Include="KhachHang.h" />
+    <ClInclude Include="KhachVIP.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

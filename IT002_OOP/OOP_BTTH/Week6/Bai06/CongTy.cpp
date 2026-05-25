@@ -1,7 +1,8 @@
 #include "CongTy.h"
-#include <fstream>
 #include <iomanip>
-#include <algorithm>
+#include <iostream>
+#include <fstream>
+#include <string>
 using namespace std;
 
 void CongTy::xuLyDuLieu(const string& fileINP, const string& fileOUT) {
@@ -15,18 +16,18 @@ void CongTy::xuLyDuLieu(const string& fileINP, const string& fileOUT) {
 	in >> x >> y >> z;
 	for(int i = 0; i < x; i ++) {
 		KhachHang* a = new KhachBTH();
-		a->Nhap();
+		a->Nhap(in);
 		dsKhachBTH.push_back((KhachBTH*)a);
 	}
 	for (int i = 0; i < y; i++) {
 		KhachHang* a = new KhachThan();
-		a->Nhap();
+		a->Nhap(in);
 		dsKhachThan.push_back((KhachThan*)a);
 	}
 
 	for (int i = 0; i < z; i++) {
 		KhachHang* a = new KhachVIP();
-		a->Nhap();
+		a->Nhap(in);
 		dsKhachVIP.push_back((KhachVIP*)a);
 	}
 	in.close();
@@ -36,9 +37,9 @@ void CongTy::xuLyDuLieu(const string& fileINP, const string& fileOUT) {
 	out << fixed << setprecision(0);
 	out << x << " " << y << " " << z << endl;
 	double Tongdoanhthu = 0;
-	auto ghiDanhSach = [&](const vector<KhachHang*>& ds) {
+	auto ghiDanhSach = [&](const auto& ds) {
 		for (const auto& kh : ds) {
-			kh->Xuat();
+			kh->Xuat(out);
 			Tongdoanhthu += kh->ThanhTien();
 		}
 		};

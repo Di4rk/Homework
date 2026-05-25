@@ -18,5 +18,37 @@
     <ClCompile Include="Bai06.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="KhanhHang.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="KhachBTH.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="KhachThan.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="KhanhVIP.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CongTy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="KhachHang.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="KhachBTH.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="KhachThan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="KhachVIP.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CongTy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
