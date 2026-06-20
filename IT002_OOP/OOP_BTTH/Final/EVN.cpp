@@ -54,6 +54,7 @@ public:
     int hieusuatchuan(int h, int w, int c) override {
         double thuc_te = (double)hieusuat * w / maxwind;
         return ceil(thuc_te) * soluongtubin; 
+    }
 };
 
 class solar : public energy {
