@@ -16,9 +16,12 @@ class charr {
             def += df;
         }
 
-        virtual void getvalue() {return value;}
-        virtual void getname() {return name;}
-        virtual int dmg(int luot) = 0;
+
+        virtual int getvalue() {return value;}
+        virtual int gettoc() {return toc;}
+        virtual int gethe() {return he;}
+        virtual string getname() {return name;}
+        virtual long long dmg(int luot) = 0;
 };
 
 class jarvan : public charr {
@@ -31,8 +34,8 @@ class jarvan : public charr {
         he = 1;
         }
 
-        int dmg(int luot) override {
-            return luot * def * 2;
+        long long dmg(int luot) override {
+            return 1LL * luot * def * 2;
         }
 };
 
@@ -46,9 +49,8 @@ class Reksai : public charr {
         he = 1;
         }
 
-        int dmg(int luot) override {
-            if(luot % 4 == 0) return luot / 4 *(atk * 2);
-            return luot * atk;
+        long long dmg(int luot) override {
+            return 1LL * (luot - (luot/4)) * atk + (luot/4) * atk * 2;
         }
 };
 
@@ -62,8 +64,8 @@ class Sivir : public charr {
         he = 0;
         }
 
-        int dmg(int luot) override {
-            return luot * atk * 2;
+        long long dmg(int luot) override {
+            return 1LL * luot * atk * 2;
         }
 };
 
@@ -77,8 +79,8 @@ class Illaoi : public charr {
         he = 1;
         }
 
-        int dmg(int luot) override {
-            return luot * (atk + def) / 2;
+        long long dmg(int luot) override {
+            return 1LL * luot * ((atk + def) / 2);
         }
 };
 
@@ -117,16 +119,51 @@ class danhsach {
             }
         }
         void buff() {
-            int loaibuff;
-            if(check[0] != 0 &&)
+            int countdausi = (check[0] > 0) + (check[1] > 0) + (check[3] > 0);
+            int counttiencong = (check[1] > 0) + (check[3] > 0);
+            int countcongnghe = (check[0] > 0) + (check[2] > 0);
+
+            int buffatkdausi = 0;
+            int buffatktiencong = 0;
+            int buffatkcongnghe = 0;
+            int buffdefcongnghe = 0;
+            if(countdausi >= 3) {
+                buffatkdausi += 30;
+            }
+            else if(countdausi >= 2) {
+                buffatkdausi += 15;
+            } else {
+                buffatkdausi += 0;
+            }
+
+            if(counttiencong >= 2) {
+                buffatktiencong += 30;
+            }
+
+            if(countcongnghe >= 2) {
+                buffatkcongnghe += 15;
+                buffdefcongnghe += 15;
+            }
+
+            for(auto x : list) {
+                (x->gettoc() == 1) ? x->addbuff(buffatkcongnghe, buffdefcongnghe) : x->addbuff(buffatktiencong, 0);
+                if(x->gethe() == 1)  x->addbuff(0, buffatkdausi);
+            }
         }
+
         void Xuat(int m) {
-            int sumvalue = 0;
+            long long sumvalue = 0;
             for(auto x : list){
                 sumvalue += x->getvalue();
                 cout << x->getname() << " - sat thuong gay ra: " << x->dmg(m) << endl;
             }
             cout << "Tong gia tri: " << sumvalue;
+        }
+
+        ~danhsach() {
+            for(auto &x : list) {
+                delete x;
+            }
         }
 };
 
@@ -135,5 +172,8 @@ int main() {
     cin >> n >> m;
     danhsach a;
     a.Nhap(n);
+    a.buff();
     a.Xuat(m);
+
+    return 0;
 }
