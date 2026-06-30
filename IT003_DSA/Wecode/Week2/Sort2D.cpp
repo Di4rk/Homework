@@ -1,25 +1,66 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <fstream>
+
 using namespace std;
 
-void mySort(vector<pair<int,int>> &Diem,int n){
-    for(int i = 1; i < n; i++){
-        for(int k = i-1; k >= 0; k--){
-            if (Diem[k].first > Diem[k+1].first) swap(Diem[k],Diem[k+1]);
-            if (Diem[k].first == Diem[k+1].first && Diem[k].second < Diem[k+1].second ) swap(Diem[k],Diem[k+1]);
-        }
+struct Word {
+	string Text;
+	string Explanation;
+};
+
+void loadData(Word dictionary[], int &n) {
+	string s;
+    cin >> n;
+    for (int i = 0; i < n; i++) {
+        getline(cin>>ws, s);
+        dictionary[i].Text = s;
+        getline(cin>>ws, s);
+        dictionary[i].Explanation = s;
     }
 }
-int main(){
-    int n;
-    cin >> n;
-    vector<pair<int,int>> Diem(n);
-    for(auto &x : Diem){
-        cin >> x.first;
-        cin >> x.second;
+void saveData(Word dictionary[], int n) {
+    for (int i = 0; i < n; i++) {
+        cout << dictionary[i].Text << endl << dictionary[i].Explanation << endl;
     }
-    mySort(Diem, n);
-    for(auto &x : Diem){
-        cout << x.first << " " << x.second  << "\n\n";
+}
+void Sort(Word [], int );
+
+int main() {
+    Word *dictionary = new Word[15000];
+	int n;
+	loadData(dictionary, n);
+	Sort(dictionary, n);
+
+	saveData(dictionary, n);
+	delete [] dictionary;
+	return 0;
+}
+
+void quicksort(Word x[], int low, int high) {
+    if(low < high) {
+        string pivot = x[high].Text;
+        int i = low - 1;
+
+        for(int j = low; j < high; ++j) {
+            if(x[j].Text < pivot) {
+                ++i;
+                swap(x[i], x[j]);
+            }
+        }
+        swap(x[i+1], x[high]);
+        int pi = i + 1;
+
+        quicksort(x, low, pi - 1);
+        quicksort(x, pi + 1, high);
     }
-    return 0;
+}
+
+void Sort(Word x[], int n) {
+
+    ios_base::sync_with_stdio(false);
+    cout.tie(nullptr);
+
+    if(n > 0) {
+        quicksort(x, 0, n - 1);
+    }
 }
