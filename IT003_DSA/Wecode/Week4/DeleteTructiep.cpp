@@ -34,8 +34,7 @@ struct HashTable {
 };
 
 void CreateHashTable(HashTable &, int);
-int HashFunction(HashTable, int); // Hash Function
-void PrintHashTable(HashTable);
+    void PrintHashTable(HashTable);
 void DeleteHashTable(HashTable &);
 void Insert(HashTable &, STUDENT);
 NODE* Search(HashTable , int);

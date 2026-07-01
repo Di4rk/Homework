@@ -92,7 +92,7 @@ void Insert(HashTable &HT, STUDENT x) {
     int base_index = index;
     int i = 0;
     while(HT.Table[index].MSSV != EMPTY && HT.Table[index].MSSV != DELETE) {
-        index = (base_index + i*i) % HT.M;
+        index = (base_index + i) % HT.M;
         ++i;
     }
     HT.Table[index] = x;
