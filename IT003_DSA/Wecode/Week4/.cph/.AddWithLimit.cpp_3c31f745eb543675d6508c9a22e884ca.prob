@@ -1,0 +1,1 @@
+{"name":"Local: AddWithLimit","url":"c:\\Dev\\C++\\IT003_DSA\\Wecode\\Week4\\AddWithLimit.cpp","tests":[{"id":1782926406371,"input":"11 0.7 8\n12 38 27 23 44 8 91 51\n5\n23 48 51 27 91","output":"2\nKHONG\nKHONG\n2\n1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Dev\\C++\\IT003_DSA\\Wecode\\Week4\\AddWithLimit.cpp","group":"local","local":true}

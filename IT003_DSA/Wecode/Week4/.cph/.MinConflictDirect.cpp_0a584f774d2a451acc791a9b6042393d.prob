@@ -1,0 +1,1 @@
+{"name":"Local: MinConflictDirect","url":"c:\\Dev\\C++\\IT003_DSA\\Wecode\\Week4\\MinConflictDirect.cpp","tests":[{"id":1782980629656,"input":"5 7\n10012 10019 10021 10026 10035","output":"4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Dev\\C++\\IT003_DSA\\Wecode\\Week4\\MinConflictDirect.cpp","group":"local","local":true}
