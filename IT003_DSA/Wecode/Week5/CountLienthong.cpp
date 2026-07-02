@@ -37,10 +37,10 @@ int main() {
     for(int i = 0; i < v; ++i) {
         if(!visited[i]) {
             ++cnt;
-            dfs(v);
+            dfs(i);
         }
     }
 
     cout << cnt; 
-    return 0;git a
+    return 0;
 }
