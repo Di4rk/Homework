@@ -85,7 +85,7 @@ int compare(SINHVIEN &a, SINHVIEN &b) {
         return (a.DRL > b.DRL) ? -1 : 1;
     }
     if(a.GioiTinh != b.GioiTinh) {
-        return (a.GioiTinh > b.GioiTinh) ? -1 : 1;
+        return (a.GioiTinh < b.GioiTinh) ? -1 : 1;
     }
     if(a.Name.Ten != b.Name.Ten) {
         return (a.Name.Ten < b.Name.Ten) ? -1 : 1;

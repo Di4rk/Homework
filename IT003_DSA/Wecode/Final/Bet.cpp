@@ -15,8 +15,8 @@ int compare(CLB &a, CLB &b) {
         return (a.PT > b.PT) ? -1 : 1;
     }
 
-    if(a.GF / (float)a.GA != b.GF / (float)b.GA) {
-        return (a.GF / (float)a.GA  > b.GF / (float)b.GA) ? -1 : 1;
+    if(a.GF - a.GA != b.GF - b.GA) {
+        return (a.GF - a.GA  > b.GF - b.GA) ? -1 : 1;
     }
 
     if(a.GA != b.GA) {
@@ -36,7 +36,6 @@ int compare(CLB &a, CLB &b) {
 }
 
 void Nhap(CLB &x) {
-    cin.ignore();
     cin >> x.name >> x.PT >> x.GF >> x.GA >> x.YC >> x.RC >> x.ranking;
 }
 void NhapDuDoan(CLB &x) {
